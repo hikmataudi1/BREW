@@ -5,7 +5,7 @@ import axios from 'axios'
 export const StoreContext = createContext(null)
 
 const StoreContextProvider = (props)=>{
-    const url ="http://localhost:4000"
+    const url ="https://perfect-brew.onrender.com"
     const [cartItems,setCartItems]=useState({})
     const [product_list,setProductList]=useState([])
     const addToCart = (itemId)=>{
