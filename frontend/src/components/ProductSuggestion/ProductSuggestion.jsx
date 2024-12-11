@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import './Productsuggestion.css';
+import './ProductSuggestion.css';
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 import ProductSlider from '../ProductSlider/ProductSlider';
