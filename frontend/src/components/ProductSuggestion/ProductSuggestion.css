@@ -1,0 +1,159 @@
+/* Main Container */
+.product-sugg {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: stretch; */
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-sugg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image Container */
+  .product-sugg-img-container {
+    width: 40%;
+    max-width: 200px;
+    aspect-ratio: 1/1; /* Square image */
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .product-sugg-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Content Container */
+  .product-sugg-content {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 15px;
+  }
+  
+  /* Name and Colors */
+  .product-sugg-info {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  
+  .product-sugg-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .product-sugg-description {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 0;
+  }
+  
+  /* Colors Section
+  .product-sugg-colors {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  } */
+  
+  .color-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .color-container {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .color-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .color-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Price and Discount */
+  .product-sugg-price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .price-text-div{
+    display: flex;
+    gap: 10px;
+  }
+  .product-sugg-price-discount {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .product-sugg-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .discount-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .discount-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .discount-badge {
+    /* font-size: 2vw; */
+    font-size: 10px;
+    /* font-weight: bold; */
+    color: white;
+    background-color: tomato;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .product-sugg {
+      /* flex-direction: column; */
+      align-items: center;
+    }
+  
+    .product-sugg-content {
+      padding-left: 0;
+      text-align: center;
+    }
+  
+    .product-sugg-price-container {
+      justify-content: center;
+      /* flex-direction: column; */
+      gap: 5px;
+    }
+  }
+  

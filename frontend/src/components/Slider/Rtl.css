@@ -1,0 +1,43 @@
+.slider-container {
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: max(40vw, 60px);
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeInSlideUp 1.5s ease-in-out forwards;
+  }
+  
+  /* Add animation for text */
+  @keyframes fadeInSlideUp {
+    0% {
+      transform: translateX(-50%) translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  

@@ -1,0 +1,106 @@
+/* Test.css */
+
+.ans {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 60%;
+}
+
+.ans:hover {
+    background-color: #4CAF50; /* Light green for hover effect */
+    color: white;
+    border-color: #4CAF50;
+    transform: translateY(-2px);
+}
+
+.ans:active {
+    transform: translateY(0);
+    background-color: #388E3C; /* Darker green for active click effect */
+}
+
+.ans.active {
+    background-color: #4CAF50; 
+    color: white;
+    border-color: #388E3C;
+}
+
+.ans-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    background-color: #FF5722; 
+    color: white;
+    padding: 12px 24px;
+    margin-top: 20px;
+    
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #E64A19; /* Darker orange for hover effect */
+}
+
+.result {
+    margin-top: 20px;
+    
+    padding: 15px;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.quiz-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ques {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.test-title{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2.5px 2.5px #d4d4d4;
+    animation: fadeIn 3s;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.product-suggestion{    
+    height: 80%;
+    display: flex;
+    width:100%;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    overflow:auto;
+    margin-bottom: 30px;
+}
+
+.product-suggestion::-webkit-scrollbar{
+    display: none;
+}
