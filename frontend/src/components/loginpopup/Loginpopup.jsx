@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Loginpopup.css'
+import './loginpopup.css'
 import axios from 'axios'
 import { assets } from '../../assets/assets'
 import {auth,provider,fireStore} from '../../../config/firebase'
