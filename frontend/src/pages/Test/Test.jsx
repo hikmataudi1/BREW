@@ -16,30 +16,43 @@ const Test = () => {
     const [category,setCategory]=useState("All")
     const [suggestedProducts, setSuggestedProducts] = useState([]);
     
-    const handleAnswer = (value, questionIndex) => {
-        if (selectedAnswers[questionIndex] === null) {
-            setSelectedAnswers(prev => {
-                const newAnswers = [...prev];
-                newAnswers[questionIndex] = value;
-                return newAnswers;
-            });
+        const handleAnswer = (value, questionIndex) => {
+        setSelectedAnswers((prev) => {
+            const newAnswers = [...prev];
+            const previousAnswer = newAnswers[questionIndex];
+            if (previousAnswer) {
     
-            switch(value) {
+                switch (previousAnswer) {
+                    case "A":
+                        setACount((prev) => prev - 1);
+                        break;
+                    case "B":
+                        setBCount((prev) => prev - 1);
+                        break;
+                    case "C":
+                        setCCount((prev) => prev - 1);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            newAnswers[questionIndex] = value;
+            switch (value) {
                 case "A":
-                    setACount(prev => prev + 1);
+                    setACount((prev) => prev + 1);
                     break;
                 case "B":
-                    setBCount(prev => prev + 1);
+                    setBCount((prev) => prev + 1);
                     break;
                 case "C":
-                    setCCount(prev => prev + 1);
+                    setCCount((prev) => prev + 1);
                     break;
                 default:
                     break;
             }
-        }
+            return newAnswers;
+        });
     };
-
     const fetchSuggestedProducts = async (suggestionCategories)=>{
         try{
             const response = await axios.get(`${url}/api/product/suggest`,{
