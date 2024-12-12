@@ -37,7 +37,7 @@ const brevoClient = new SibApiV3Sdk.TransactionalEmailsApi();
             subject: "Get your free ebook!",
             htmlContent: `<html><body>
             <h1>Welcome to Perfect Brew ${name}!</h1>
-            <p>Thank you for joining us on this journey to perfect coffee making! This guide is just a glimpse of what's to come from our upcoming online store, where you'll find everything you need to brew your ideal cup—expertly curated equipment, and all the inspiration you need. Stay tuned for our launch and let's make every coffee moment extraordinary together!</p>
+            <p>This guide is just a simple gift from Perfect Brew , you'll find everything you need to brew your ideal cup with our expertly curated equipment, and all the inspiration you need. let's make every coffee moment extraordinary together!</p>
             <a href="https://drive.google.com/uc?id=1Hn1ZpI4Op4zinVE8EDOQnV6FkGTSxy8h&export=download">Download Coffee Guide</a>
             </body></html>`,
           });
@@ -78,7 +78,9 @@ const sendOrderMail = async (req, res) => {
           <h3>Shipping Address:</h3>
           <p>${shippingAddress.address}, ${shippingAddress.building}</p>
           <p>We will notify you once your order is shipped!</p>
-          <p>Thank you for shopping with us!</p>
+          <p>This guide is just a simple gift from Perfect Brew , you'll find everything you need to brew your ideal cup with our expertly curated equipment, and all the inspiration you need. let's make every coffee moment extraordinary together!</p>          
+          <a href="https://drive.google.com/uc?id=1Hn1ZpI4Op4zinVE8EDOQnV6FkGTSxy8h&export=download">Download Coffee Guide</a>
+          <p>Thank you for choosing perfect brew!</p>
         `,
       });
   
