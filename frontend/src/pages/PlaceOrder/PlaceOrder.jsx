@@ -21,7 +21,7 @@ const PlaceOrder = () => {
   
   console.log("cart items:"+cartItems);
   
-  const deliveryFees = getTotalCartAmount() === 0 ? 0 : 5;
+  const deliveryFees = getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()>150?0:5;
   const totalAmount = getTotalCartAmount() + deliveryFees;
 
   const handleInputChange = (e) => {
@@ -134,18 +134,19 @@ const PlaceOrder = () => {
           <input
             type="text"
             name="address"
-            placeholder="Address"
+            placeholder="Full detailed Address"
             onChange={handleInputChange}
             value={formData.address}
           />
           <input
             type="text"
-            name="building"
+            name="building, floor"
             placeholder="Building"
             onChange={handleInputChange}
             value={formData.building}
           />
         </div>
+        <p className='note'>Please provide all address information (street, floor, etc)</p>
       </div>
       <div className="place-order-right">
         <div className="cart-total">
