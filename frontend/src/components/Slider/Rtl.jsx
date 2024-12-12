@@ -21,6 +21,7 @@ function Rtl() {
     { image: "rtl1.png" },
     { image: "rtl2.png" },
     { image: "rtl3.png" },
+    { image: "rtl4.png" }
   ];
 
   return (
