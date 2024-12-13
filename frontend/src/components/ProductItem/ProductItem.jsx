@@ -7,6 +7,7 @@ import ProductSlider from "../ProductSlider/ProductSlider";
 const ProductItem = ({ id, name, price, description, images, type ,inStock}) => {
   const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext);
   const [selectedColor, setSelectedColor] = useState(images[0]?.color || "");
+  const [showDetails, setShowDetails] = useState(false);
   const filteredImages = images.filter((img) => img.color === selectedColor);
 
   return (
@@ -60,8 +61,15 @@ const ProductItem = ({ id, name, price, description, images, type ,inStock}) => 
             ))}
           </div>
         </div>
-
-        <p className="product-item-description">{description}</p>
+        
+        {showDetails && <p className="product-item-description">{description}</p>}
+        
+        <button
+          className="details-toggle-btn"
+          onClick={() => setShowDetails((prev) => !prev)}
+        >
+          {showDetails ? "Show Less" : "Show Details"}
+        </button>
         
         <div className="price-container">
             <div className="price-text">
