@@ -138,6 +138,18 @@
     padding: 2px;
     border-radius: 5px;
   }
+.details-toggle-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.details-toggle-btn:hover {
+  background-color: #e0e0e0;
+}
+
   
   @media (max-width: 768px) {
     .product-sugg {
