@@ -166,7 +166,7 @@ const PlaceOrder = () => {
             <b>{totalAmount}$</b>
           </div>
           <p className='note'>Note: We accept payment by cash on delivery only.  </p>
-          <button type="submit">Proceed to Payment</button>
+          <button type="submit">Confirm and Place Order</button>
         </div>
       </div>
     </form>
