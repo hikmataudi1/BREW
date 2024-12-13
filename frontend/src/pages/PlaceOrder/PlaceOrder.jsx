@@ -21,7 +21,7 @@ const PlaceOrder = () => {
   
   console.log("cart items:"+cartItems);
   
-  const deliveryFees = getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()>150?0:5;
+  const deliveryFees = getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()>150?0:4;
   const totalAmount = getTotalCartAmount() + deliveryFees;
 
   const handleInputChange = (e) => {
