@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='footer-content'>
             <div className="footer-content-left">
                 <img src={assets.logo2} alt="" className='logo'/>
-                <p>Thank you for choosing BREW , the best coffee equipment in town</p>
+                <p>Thank you for choosing PERFECT BREW , the best coffee equipment in town</p>
                 <div className="footer-social-icons">
                     <a href="https://wa.me/+96171498677"><img src={assets.instagram_icon}/></a>
                     <img src={assets.whatsapp_icon} alt="" />
