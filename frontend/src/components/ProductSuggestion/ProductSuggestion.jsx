@@ -7,6 +7,7 @@ import ProductSlider from '../ProductSlider/ProductSlider';
 const Productsuggestion = ({ id, name, price, description, images, type }) => {
   const { url } = useContext(StoreContext);
   const [selectedColor, setSelectedColor] = useState(images[0]?.color || "");
+  const [showDetails, setShowDetails] = useState(false)
   const filteredImages = images.filter((img) => img.color === selectedColor);
 
   return (
@@ -33,7 +34,14 @@ const Productsuggestion = ({ id, name, price, description, images, type }) => {
           
         </div>
         <div className="product-sugg-colors">
-        <p className="product-sugg-description">{description}</p>
+        
+        {showDetails && <p className="product-item-description">{description}</p>}
+        <button
+          className="details-toggle-btn"
+          onClick={() => setShowDetails((prev) => !prev)}
+        >
+          {showDetails ? "Show Less" : "Show Details"}
+        </button>
         </div>
         <div className="product-sugg-price-container">
             <p className="product-sugg-price-discount">${Math.floor(price * 1.35)}</p>
