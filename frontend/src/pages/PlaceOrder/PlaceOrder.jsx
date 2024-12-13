@@ -140,8 +140,8 @@ const PlaceOrder = () => {
           />
           <input
             type="text"
-            name="building, floor"
-            placeholder="Building"
+            name="building"
+            placeholder="Building , floor"
             onChange={handleInputChange}
             value={formData.building}
           />
