@@ -7,7 +7,7 @@ import ProductDisplay from '../../components/productDisplay/ProductDisplay'
 const Products = () => {
 
   const [category,setCategory]=useState("All")
-  const [type,setType]=useState("All")
+  const [type,setType]=useState("Classic")
 
   return (
     <div>
