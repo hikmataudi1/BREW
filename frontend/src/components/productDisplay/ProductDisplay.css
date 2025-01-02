@@ -1,6 +1,6 @@
 .product-display {
-  margin: 30px auto;
-  padding: 0 20px;
+  margin: 30px 0px;
+  padding: 0 10px;
 }
 
 .product-display h2 {
@@ -13,15 +13,21 @@
 
 .product-display-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 10px;
   row-gap: 30px;
   align-items: stretch;
 }
 
 @media (max-width: 768px) {
+  .product-display-list{
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    row-gap: 0px;
+  }
   .product-item {
     max-width: 100%;
+    padding: 0;
   }
 
   .product-display h2{
@@ -32,6 +38,6 @@
   }
 
   .discount-tag {
-    margin-top: 5px;
+    margin-top: 0px;
   }
 }
