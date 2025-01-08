@@ -1,6 +1,5 @@
 import basket_icon from './basket_icon.png'
 import logo from './logo.png'
-import header_img from './header_img.png'
 import search_icon from './search_icon.png'
 import menu_1 from './menu-v60.jpg'
 import menu_2 from './menu-mp.jpg'
@@ -34,13 +33,14 @@ import whatsapp_icon from './whatsapp_icon.png'
 import discount_icon from './discount_img.png'
 import logo2 from './logo2.png'
 import ebooklogo from './ebooklogo.png'
+import arrow from './next.png'
 
 export const assets = {
     logo,
     logo2,
     ebooklogo,
     basket_icon,
-    header_img,
+    // header_img,
     search_icon,
     rating_starts,
     add_icon_green,
@@ -54,7 +54,8 @@ export const assets = {
     parcel_icon,
     whatsapp_icon,
     instagram_icon,
-    discount_icon
+    discount_icon,
+    arrow
 }
 
 export const menu_list = [
