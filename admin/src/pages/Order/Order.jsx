@@ -106,8 +106,11 @@ const Order = ({ url }) => {
                   if (!product) return null;
                   return (
                     <span key={productObj.product}>
-                      {product.name} x {productObj.quantity}
-                      {index < order.products.length - 1 && ', '}
+                      {product.name} x {productObj.quantity} 
+                      {productObj.colors.map((color,index)=>(
+                        <p>{color} </p>
+                ))}
+                       {index < order.products.length - 1 && ', '}
                     </span>
                   );
                 })}
