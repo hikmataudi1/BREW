@@ -29,7 +29,7 @@ const {getTotalCartAmount} = useContext(StoreContext)
         }
         
         <div className="navbar-search-icon">
-        <Link to="/cart"><img src={assets.basket_icon}/></Link>
+        <Link to="/cart"><img src={assets.basket_icon} id='basket-icon'/></Link>
 
           <div className={getTotalCartAmount()===0?"":"dot"}></div>
         </div>
