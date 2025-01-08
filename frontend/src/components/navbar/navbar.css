@@ -60,6 +60,9 @@
     right:-8px ;
 }
 
+#basket-icon{
+    width:120%;
+}
 @media (max-width:1050px) {
     .navbar .logo{
         width: 140px;
@@ -96,6 +99,7 @@
         padding: 7px 20px;
         font-size: 15px;
     }
+
 }
 @media (max-width:750px) {
     
