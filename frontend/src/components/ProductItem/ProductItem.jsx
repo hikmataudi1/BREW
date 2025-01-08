@@ -7,40 +7,17 @@ import ProductSlider from "../ProductSlider/ProductSlider";
 const ProductItem = ({ id, name, price, description, images, type ,inStock}) => {
   const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext);
   const [selectedColor, setSelectedColor] = useState(images[0]?.color || "");
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(false)
   const filteredImages = images.filter((img) => img.color === selectedColor);
 
   return (
     <div className="product-item">
       <div className="product-item-img-container">
-        <ProductSlider images={filteredImages.map((img) => img.filename)} url={url} />
-        
-        {!inStock?
-        <p className="out-of-stock">Out of stock</p>:
-        !cartItems[id] ? (
-          <img
-            className="add"
-            onClick={() => addToCart(id)}
-            src={assets.add_icon_white}
-            alt="Add to cart"
-          />
-        ) : (
-          <div className="product-item-counter">
-            <img
-              className="add-icon"
-              onClick={() => removeFromCart(id)}
-              src={assets.remove_icon_red}
-              alt="Remove item"
-            />
-            <p>{cartItems[id]}</p>
-            <img
-              className="add-icon"
-              onClick={() => addToCart(id)}
-              src={assets.add_icon_green}
-              alt="Add item"
-            />
-          </div>
-        )}
+        <ProductSlider images={filteredImages.map((img) => img.filename)} url={url} />   
+        <div>
+          <img src={assets.arrow} alt="previous" className="slider-arrow left-arrow" />
+          <img src={assets.arrow} alt="next" className="slider-arrow right-arrow"/>
+        </div>
       </div>
 
       {/* Info Section */}
@@ -61,9 +38,30 @@ const ProductItem = ({ id, name, price, description, images, type ,inStock}) => 
             ))}
           </div>
         </div>
-        
+        {!inStock?
+        <p className="out-of-stock">Out of stock</p>:
+        !cartItems[id] ? (
+          <div className="add-text" onClick={() => addToCart(id)}>
+            <p>Add to cart</p>
+            </div>
+          ) : (
+          <div className="product-item-counter">
+            <img
+              className="add-icon"
+              onClick={() => removeFromCart(id)}
+              src={assets.remove_icon_red}
+              alt="Remove item"
+            />
+            <p>{cartItems[id]}</p>
+            <img
+              className="add-icon"
+              onClick={() => addToCart(id)}
+              src={assets.add_icon_green}
+              alt="Add item"
+            />
+          </div>
+        )}
         {showDetails && <p className="product-item-description">{description}</p>}
-        
         <button
           className="details-toggle-btn"
           onClick={() => setShowDetails((prev) => !prev)}
@@ -78,8 +76,7 @@ const ProductItem = ({ id, name, price, description, images, type ,inStock}) => 
             </p>
             <p className="product-item-price">${price}</p>
             </div>
-            <img src={assets.discount_icon} alt="Discount icon" />
-            <h4  className="discount-tag">Launch Discount!</h4>
+            <img src={assets.discount_icon} className="discount-icon" alt="Discount icon" />
         </div>
       </div>
     </div>
