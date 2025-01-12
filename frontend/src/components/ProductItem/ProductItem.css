@@ -101,8 +101,6 @@
 
   gap: 15px;
   z-index: 100;
-  /* bottom: 15px;
-  right: 15px; */
   font-size: larger;
   font-weight: 500;
   cursor: pointer;
@@ -156,13 +154,10 @@
   color: black;
   flex-shrink: 0; 
   padding-left: 5px;
-  /* white-space: nowrap; */
 }
 .product-item-price-discount {
   text-decoration: line-through;
   color: rgb(65, 43, 14);
-  /* flex-shrink: 0; */
-  /* white-space: nowrap; */
 }
 .color-container {
   display: flex;
@@ -203,19 +198,8 @@
 }
 
 .out-of-stock {
-  color: rgb(65, 43, 14);
-  font-weight: bold;
-  width: auto;
-  padding: 2.5px;
-  border-radius: 10px;
-  position: absolute;
-  box-shadow: 1px 1px 1px 1px black;
-  z-index: 100;
-  bottom: 15px;
-  right: 15px;
-  height: auto;
-  background-color: white;
-
+background-color:tomato;
+color: white;
   
 }
 .product-item.out-of-stock {
