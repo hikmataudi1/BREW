@@ -39,9 +39,12 @@ const ProductItem = ({ id, name, price, description, images, type ,inStock}) => 
           </div>
         </div>
         {!inStock?
-        <p className="out-of-stock">Out of stock</p>:
+        <div className="add-text out-of-stock">
+        <p>Out of Stock</p>
+        </div>
+                  :
         !cartItems[id] ? (
-          <div className="add-text" onClick={() => addToCart(id)}>
+          <div className="add-text " onClick={() => addToCart(id)}>
             <p>Add to cart</p>
             </div>
           ) : (
